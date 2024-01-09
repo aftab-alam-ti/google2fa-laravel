@@ -2,6 +2,8 @@
 
 namespace PragmaRX\Google2FALaravel\Support;
 
+use Illuminate\Support\Str;
+
 trait Auth
 {
     /**
