@@ -36,6 +36,10 @@ trait Auth
      */
     protected function getUser()
     {
+        $request = app('Illuminate\Http\Request');
+        if (Str::contains($request->getRequestUri(), 'approver')) {
+            return $request->approver();
+        }
         return $this->getAuth()->user();
     }
 
